@@ -1,0 +1,19 @@
+{
+  "name": "HB Back to Top Module",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/razonyang/hb-back-to-top.git"
+  },
+  "author": "Razon Yang <razonyang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/razonyang/hb-back-to-top/issues"
+  },
+  "homepage": "https://github.com/razonyang/hb-back-to-top",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}
