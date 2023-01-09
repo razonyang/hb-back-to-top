@@ -7,6 +7,7 @@
     }
 
     const hide = (btn) => {
+        btn.classList.remove('scrolling')
         btn.classList.add('opacity-0')
         btn.style = ''
     }
@@ -26,6 +27,7 @@
         });
 
         btn?.addEventListener('click', () => {
+            btn.classList.add('scrolling')
             window.scrollTo({
                 top: 0,
                 left: 0,

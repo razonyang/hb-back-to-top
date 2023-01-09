@@ -4,6 +4,11 @@
     right: 1rem;
     transition: opacity 0.5s;
     z-index: -1;
+    transition: bottom 1.5s;
+
+    &.scrolling {
+        bottom: 100%;
+    }
 }
 
 .hb-back-to-top-icon {
