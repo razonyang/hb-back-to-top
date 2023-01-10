@@ -22,7 +22,7 @@
 
     &:hover,
     &.scrolling {
-        color: var(--#{$prefix}primary);
+        color: var(--#{$prefix}primary-text);
     }
 }
 
