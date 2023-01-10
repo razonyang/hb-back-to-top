@@ -1,13 +1,27 @@
 .hb-back-to-top {
-    position: fixed;
+    background: transparent;
+    border: none;
     bottom: 1rem;
+    opacity: 0;
+    padding: 0;
+    position: fixed;
     right: 1rem;
     transition: opacity 0.5s;
     z-index: -1;
-    transition: bottom 1.5s;
 
     &.scrolling {
         bottom: 100%;
+        transition: bottom 1s;
+    }
+
+    &.show {
+        opacity: 1;
+        z-index: 1080;
+    }
+
+    &:hover,
+    &.scrolling {
+        color: var(--#{$prefix}primary);
     }
 }
 

@@ -2,28 +2,28 @@
     'use strict'
 
     const show = (btn) => {
-        btn.classList.remove('opacity-0')
-        btn.style = 'z-index: 1080'
+        btn.classList.add('show')
     }
 
     const hide = (btn) => {
-        btn.classList.remove('scrolling')
-        btn.classList.add('opacity-0')
-        btn.style = ''
+        btn.classList.remove('show')
     }
 
     window.addEventListener('DOMContentLoaded', () => {
         const btn = document.querySelector('.hb-back-to-top');
 
+        let y = 0
         window.addEventListener('scroll', () => {
-            if (
-                document.body.scrollTop > 20 ||
-                document.documentElement.scrollTop > 20
-            ) {
+            const top = document.documentElement.scrollTop
+            if (document.body.scrollTop > 20 || top > 20) {
                 show(btn);
             } else {
                 hide(btn);
             }
+            if (top > y) {
+                btn.classList.remove('scrolling')
+            }
+            y = top
         });
 
         btn?.addEventListener('click', () => {
@@ -33,6 +33,7 @@
                 left: 0,
                 behavior: 'smooth',
             })
+
         })
     })
 })()
